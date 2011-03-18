@@ -1,0 +1,21 @@
+Projeto de um sistema de notícias com python/django
+
+Estou aprendendo Django/python e desenvolvendo esse sistema como estudo.
+
+Caso queiram colaborar, podemos fazer um sistema legal
+
+Recursos Prontos
+
+---- admin com 
+- sistema de usuários
+- permissões de usuario
+- CRUD noticias
+
+---- Página prontas
+- Home com listagem de últimas notícias
+- Visualização da noticia
+
+- Feed com problema na view, nao sei pq ainda ta dando pau
+
+
+
