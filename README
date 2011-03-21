@@ -2,19 +2,13 @@ Projeto de um sistema de noticias com python/django
 
 Recursos Prontos
 
-- admin
-
+- admin /usuarios/grupos/flatpages/
 - noticias
 - enquetes
-- p‡ginas com conteudo institutional (html) flatpages
-- 
+- paginas com conteudo institutional (html) flatpages
+- rss
 
 
 
-Instrucao de instalacao
-- baixe o projeto
-- Configure o bando de dados no arquivo settings.py
-- Crie um banco de dados: ex easy_news
-- Na raiz do projeto execute: python manage.py syncdb (Linux ou mac) para criar as tabelas
-- Para rodar o projeto digite python manage.py runserver
+Mais info: https://github.com/onovaes/Easy-News/wiki/
 
