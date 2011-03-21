@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Enquetes{% endblock %}
+
+{% block content %}
+
+<h1>{{ object.quetao }}</h1>
+
+<ul>
+{% for escolha in object.escolha_set.all %}
+    <li>{{ escolha.escolha }} -- {{ escolha.votos }} vote{{ escolha.votos|pluralize }}</li>
+{% endfor %}
+</ul>
+
+<a href="/enquetes/{{ object.id }}/">Votar novamente?</a>
+
+{% endblock %}

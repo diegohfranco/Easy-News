@@ -1,21 +1,20 @@
-Projeto de um sistema de notícias com python/django
-
-Estou aprendendo Django/python e desenvolvendo esse sistema como estudo.
-
-Caso queiram colaborar, podemos fazer um sistema legal
+Projeto de um sistema de noticias com python/django
 
 Recursos Prontos
 
----- admin com 
-- sistema de usuários
-- permissões de usuario
-- CRUD noticias
+- admin
 
----- Página prontas
-- Home com listagem de últimas notícias
-- Visualização da noticia
-
-- Feed com problema na view, nao sei pq ainda ta dando pau
+- noticias
+- enquetes
+- p�ginas com conteudo institutional (html) flatpages
+- 
 
 
+
+Instrucao de instalacao
+- baixe o projeto
+- Configure o bando de dados no arquivo settings.py
+- Crie um banco de dados: ex easy_news
+- Na raiz do projeto execute: python manage.py syncdb (Linux ou mac) para criar as tabelas
+- Para rodar o projeto digite python manage.py runserver
 

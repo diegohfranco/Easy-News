@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Enquetes{% endblock %}
+
+{% block content %}
+
+{% if object_list %}
+    <ul>
+    {% for object in object_list %}
+        <li><a href="/enquetes/{{ object.id }}/">{{ object.questao }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}

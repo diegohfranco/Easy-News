@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if latest_noticia_list %}
+    <ul>
+    {% for no in latest_noticia_list %}
+        <li><a href="{{ url }}/noticias/{{ no.id }}/">{{ no.titulo }}</a>
+			<Br>{{ no.resumo }}
+		</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Nenhuma Noticia Cadastrada</p>
+{% endif %}
+
+{% endblock %}

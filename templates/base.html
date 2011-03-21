@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+<head>    
+	<title>{% block title %}Easy News - Gerenciador de notícias OPEN Source em Python{% endblock %}</title>
+  	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+  	<meta http-equiv="Content-Language" content="pt-br" />
+  	<meta name="keywords" content="easy news, sistema de notícia, python, django" />
+  	<meta name="description" content="O Easy News é um gerenciador de notícias OPEN SOURCE desenvolvido em python com o framework django." />
+	<link REL="SHORTCUT ICON" HREF="{{ MEDIA_URL }}favicon.ico">
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}css/padrao.css"/>
+    {% endblock %}
+
+	{% block feeds %}
+  	<link rel="alternate" type="application/rss+xml" title="Últimas notícias" href="{{ URL }}/rss/ultimas/" />
+  	{% endblock feeds %}
+  	
+  	{% block scripts %}
+ 	{% endblock scripts %}
+</head>
+<body>
+<div id="pageBody">
+	<div id="header">
+		
+		<div class="row">		
+			<div><a href="{{ URL }}/"><img src="{{ MEDIA_URL }}img/logo-easy-news.png"></a></div>
+			<div>{% block searchbox %}{% endblock %}</div>
+		</div>
+		
+		<div id="topBar">
+		    	{% block topbar %}
+		    	<ul>
+		        	<li><a href="{{ URL }}/">Home</a></li>
+		        	<li><a href="{{ url }}/noticias/">Notícias</a></li>
+		        	<li><a href="{{ url }}/publicidade/">Publicidade</a></li>
+		        	<li><a href="{{ url }}/enquetes/">Enquetes</a></li>
+		        	<li><a href="{% url views.contato %}">Contato</a>
+		    	</ul>
+		    	{% endblock %}
+   	 	</div>
+		
+	</div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    
+    {% include 'footer.html' %}
+</div>
+</body>
+</html>

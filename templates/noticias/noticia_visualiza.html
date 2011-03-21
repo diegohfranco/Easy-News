@@ -1,0 +1,25 @@
+{% extends "noticias/base_noticias.html" %}
+
+{% block title %}{{ noticia.titulo }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+
+<h1>{{ noticia.titulo }}</h1>
+
+<h2>{{ noticia.resumo }}</h2>
+
+<span>{{ noticia.data_entrada }}<span>
+
+<!--#noticia.data_entrada|date:"d \d\e F \d\e Y"-->
+<!--#noticia.data_entrada|timesince-->
+
+<span>
+
+{{ noticia.texto }}
+
+</span>
+
+{% endblock %}

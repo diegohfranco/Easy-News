@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Enquetes{% endblock %}
+
+{% block content %}
+
+
+<h1>{{ object.questao }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="/enquetes/{{ object.id }}/vote/" method="post">
+{% csrf_token %}
+{% for escolha in object.escolha_set.all %}
+    <input type="radio" name="escolha" id="escolha{{ forloop.counter }}" value="{{ escolha.id }}" />
+    <label for="escolha{{ forloop.counter }}">{{ escolha.escolha }}</label><br />
+{% endfor %}
+<input type="submit" value="Vote" />
+</form>
+
+{% endblock %}
+

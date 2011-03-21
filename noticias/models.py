@@ -20,4 +20,5 @@ class Noticia(models.Model):
 	imagem_g_credito = models.CharField(max_length=50 , blank=True)
 	imagem_g_descricao = models.CharField(max_length=200 , blank=True)
 	view = models.IntegerField(max_length=5,default=0)
-	ip = models.IPAddressField(null=True)
+	ip = models.IPAddressField(null=True)		
+		
