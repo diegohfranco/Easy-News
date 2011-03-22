@@ -20,7 +20,7 @@ urlpatterns = patterns('',
 	(r'^$', 'noticias.views.index'),
 	
 	#noticia
-	(r'^noticias/(?P<noticia_id>\d+)/$', 'noticias.views.detail'),
+	(r'^noticias/(?P<slug>[\w_-]+)/$', 'noticias.views.detail'),
 	(r'^noticias/', 'noticias.views.index'),
 	
 	#rss

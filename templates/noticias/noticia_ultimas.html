@@ -5,7 +5,7 @@
 {% if latest_noticia_list %}
     <ul>
     {% for no in latest_noticia_list %}
-        <li><a href="{{ url }}/noticias/{{ no.id }}/">{{ no.titulo }}</a>
+        <li><a href="{{ no.get_absolute_url }}">{{ no.titulo }}</a>
 			<Br>{{ no.resumo }}
 		</li>
     {% endfor %}

@@ -9,7 +9,7 @@ from django.contrib import admin
 
 class NoticiaAdmin(admin.ModelAdmin):
 	fieldsets = [
-        (None,               {'fields': ['chapeu','titulo','resumo','texto','view']}),
+        (None,               {'fields': ['chapeu','titulo','resumo','texto','view','slug']}),
         ('Datas', {'fields': ['data_entrada','data_saida'], 'classes': ['collapse']})
     ]
     #inlines = [ChoiceInline]
