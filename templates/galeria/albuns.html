@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Galeria de Imagens{% endblock %}
+
+{% block content %}
+
+<h1>Galeria de Imagens</h1>
+
+<ul>
+    {% for album in lista %}
+    <li><a title="{{ album }}" href="{{ album.slug }}/">{{ album }}</a></li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}
+
+

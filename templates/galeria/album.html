@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}{{ album }}{% endblock %}
+
+{% block content %}
+
+<h1>{{ album }}</h1>
+
+<div class="miniaturas">
+
+    {% for ima in imagens %}
+    <div class="miniatura">
+        <a href="{{ ima.get_absolute_url }}">
+        <img src="{{ ima.thumbnail.url }}"/>
+        {{ ima }}
+        </a>
+    </div>
+    {% endfor %}
+
+</div>
+
+Voltar para pagina de 
+<a href="{% url galeria.views.albuns %}">Galerias</a>
+
+{% endblock %}
+
+
