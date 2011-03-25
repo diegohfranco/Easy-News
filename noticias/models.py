@@ -30,22 +30,6 @@ class Noticia(models.Model):
 
 # SIGNALS
 from django.db.models import signals
-from django.template.defaultfilters import slugify
+from utils.signals_comuns import slug_pre_save
 
-# criando um signal
-def noticia_pre_save(signal, instance, sender, **kwargs):
-    """Este signal gera um slug automaticamente. Ele verifica se ja existe uma
-    noticia com o mesmo slug e acrescenta um numero ao final para evitar
-    duplicidade"""
-    if not instance.slug:
-        slug = slugify(instance.titulo)
-        novo_slug = slug
-        contador = 0
-
-        while Noticia.objects.filter(slug=novo_slug).exclude(id=instance.id).count() > 0:
-            contador += 1
-            novo_slug = '%s-%d'%(slug, contador)
-
-        instance.slug = novo_slug
-
-signals.pre_save.connect(noticia_pre_save, sender=Noticia)
+signals.pre_save.connect(slug_pre_save, sender=Noticia)

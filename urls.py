@@ -27,21 +27,30 @@ urlpatterns = patterns('',
 	(r'^rss/(?P<url>.*)/$', 'django.contrib.syndication.views.feed',
         {'feed_dict': feeds}),	
 
-	# Static media (serve using real web server when in production)
-  	(r'^media/(.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
-
     #admin:
     (r'^admin/', include(admin.site.urls)),
 
 	#contato	
 	(r'^contato/$', 'views.contato'),
-
+	
+	#galerias
+	(r'^galeria/$', 'galeria.views.albuns'),
+	(r'^galeria/(?P<slug>[\w_-]+)/$', 'galeria.views.album'),
+	(r'^galeria/imagem/(?P<slug>[\w_-]+)/$', 'galeria.views.imagem'),
+	
+	
+	
+	
 
 	#enquetes
 	(r'^enquetes/$', 'django.views.generic.list_detail.object_list', info_dict),
 	(r'^enquetes/(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', info_dict),
 	url(r'^enquetes/(?P<object_id>\d+)/resultado/$', 'django.views.generic.list_detail.object_detail', dict(info_dict, 							template_name='enquetes/enquete_results.html'), 'enquete_results'),
     (r'^enquetes/(?P<enquete_id>\d+)/vote/$', 'enquetes.views.vote'),
+
+
+	# Static media (serve using real web server when in production)
+  	(r'^media/(.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
 
 )
 

@@ -8,7 +8,7 @@
 
 <ul>
     {% for album in lista %}
-    <li><a title="{{ album }}" href="{{ album.slug }}/">{{ album }}</a></li>
+    <li><a title="{{ album }}" href="{{ album.get_absolute_url }}">{{ album }}</a></li>
     {% endfor %}
 </ul>
 
