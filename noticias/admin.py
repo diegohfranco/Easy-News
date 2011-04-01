@@ -8,6 +8,9 @@ from django.contrib import admin
     #extra = 3
 
 class NoticiaAdmin(admin.ModelAdmin):
+	class Media:
+		js = ('/js/tiny_mce/tiny_mce.js', '/js/textareas.js')
+
 	fieldsets = [
         (None,               {'fields': ['chapeu','titulo','resumo','texto','view','slug']}),
         ('Datas', {'fields': ['data_entrada','data_saida'], 'classes': ['collapse']})
