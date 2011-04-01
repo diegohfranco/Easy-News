@@ -51,7 +51,6 @@ urlpatterns = patterns('',
 
 	# Static media (serve using real web server when in production)
   	(r'^media/(.*)$', 'django.views.static.serve',{'document_root': settings.MEDIA_ROOT}),
-
 )
 
 #somente se for em ambiente de desenvolvimento
