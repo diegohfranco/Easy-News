@@ -1,14 +1,6 @@
-Projeto de um sistema de noticias com python/django
-
-Recursos Prontos
-
-- admin /usuarios/grupos/flatpages/
-- noticias
-- enquetes
-- paginas com conteudo institutional (html) flatpages
-- rss
+Projeto de um sistema de gerencimento de noticias com python/django
 
 
-
-Mais info: https://github.com/onovaes/Easy-News/wiki/
+Informacoes de instalacao e recursos estao disponivel no endereco: 
+https://github.com/onovaes/Easy-News/wiki/
 

@@ -1,12 +1,6 @@
 from noticias.models import Noticia , Editoria
 from django.contrib import admin
 
-#from polls.models import Choice
-
-#class EditoriaInline(admin.TabularInline):
-	#model = Editoria
-	#extra = 3
-
 class NoticiaAdmin(admin.ModelAdmin):
 	class Media:
 		js = ('/js/tiny_mce/tiny_mce.js', '/js/textareas.js')
@@ -16,7 +10,6 @@ class NoticiaAdmin(admin.ModelAdmin):
         (None,               {'fields': ['chapeu','titulo','resumo','texto','editoria']})
         
     ]
-	#inlines = (EditoriaInline,)
 	list_display = ('titulo', 'data_entrada','view','usuario')
 	list_filter = ['data_entrada']
 	search_fields = ['titulo']
@@ -29,7 +22,6 @@ class NoticiaAdmin(admin.ModelAdmin):
 
 class EditoriaAdmin(admin.ModelAdmin):
 	fields = ['titulo','sub_titulo','imagem_p']
-	#inlines = [EditoriaInline]
 	list_display = ('titulo', 'data_cadastro')
 	list_filter = ['data_cadastro']
 	search_fields = ['titulo']
