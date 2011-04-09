@@ -39,9 +39,6 @@ urlpatterns = patterns('',
 	(r'^galeria/imagem/(?P<slug>[\w_-]+)/$', 'galeria.views.imagem'),
 	
 	
-	
-	
-
 	#enquetes
 	(r'^enquetes/$', 'django.views.generic.list_detail.object_list', info_dict),
 	(r'^enquetes/(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', info_dict),

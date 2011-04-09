@@ -79,10 +79,11 @@ INSTALLED_APPS = (
 	'django.contrib.admin',
 	'django.contrib.syndication',
 	'django.contrib.flatpages',	
-	
+
 	'galeria',	
 	'noticias',
 	'enquetes',
+	#'photologue',
 
 )
 
